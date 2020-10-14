@@ -10,12 +10,17 @@ class Clapper extends React.Component {
     }
     render() { 
         return (
+            <>
+            
             <button
                 className="btn btn-outline-primary"
                 title={`Add one ${ this.props.label }`}
             >
-                {this.state.totalClaps} { this.props.label }
+                <span className="badge badge-pill badge-warning">{this.state.totalClaps}</span>
+                {' '}
+                { this.props.label }s
             </button>
+            </>
         );
     }
 }

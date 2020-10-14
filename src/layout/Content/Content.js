@@ -1,7 +1,9 @@
 import React from 'react';
 
-export default (props) => (
+const Content = (props) => (
     <section>
         {props.children}
     </section>
 )
+
+export default Content

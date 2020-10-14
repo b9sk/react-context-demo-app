@@ -5,11 +5,11 @@ import lodash from 'lodash';
 
 export default () => {
     const data = React.useContext(DataContext)
-
+    data.consumedAt = new Date()
     // avoiding double rendering
     if (lodash.isArray( data.data )) {
         // console.log(data.data);
-        // console.log(data.ad);
+        // console.log(data);
         return (
             <main>
                 <>

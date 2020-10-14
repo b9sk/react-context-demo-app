@@ -7,7 +7,7 @@ class ProfileCard extends Component {
         this.state = {  }
     }
     render() { 
-        console.log(this.props.data);
+        // console.log(this.props.data);
         return (
             <article className="card">
                 <div className="card-body">
