@@ -31,11 +31,19 @@ class App extends React.Component {
     this.setState( { fetchedData: await this.fetchData() } )
   }
 
+  getPurrsFromLs() {
+    let value = parseInt(localStorage.getItem('Purrs'))
+    if (isNaN(value))
+      value = 0
+
+    return value
+  }
+
   render() {
     return (
       <>
         {/* init props (optional) */}
-        <PurrContextProvider value={{ username: "John", purrDeposit: 10 }}>
+        <PurrContextProvider value={{ username: "John", purrDeposit: this.getPurrsFromLs() }}>
           <Header />
           <Content>
             <DataContext.Provider value={ this.state.fetchedData }>

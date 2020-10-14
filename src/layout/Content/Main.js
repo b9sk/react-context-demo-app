@@ -5,7 +5,6 @@ import lodash, { shuffle } from 'lodash';
 
 export default () => {
     const data = React.useContext(DataContext)
-    data.consumedAt = new Date()
     // waiting for a fetch result
     if (lodash.isArray( data.data )) {
         return (

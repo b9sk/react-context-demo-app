@@ -25,8 +25,8 @@ class Header extends React.Component {
                     </div>
                     <div className="col col-md-auto">
                         <div className="text-white">
-                            Hello, {username}<br />
-                            <small>Your Purr Deposit:{' '}<span className="badge badge-light">{deposit}</span> </small>
+                            <small>Hello, {username}<br /></small>
+                            <big>Your Purr Deposit:{' '}<span className="badge badge-light">{deposit}</span> </big>
                         </div>
                     </div>
                 </div>

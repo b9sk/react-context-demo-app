@@ -18,7 +18,9 @@ export class PurrContextProvider extends React.Component {
     }
 
     updateState(newState = {...this.state}) {
-        this.setState( {...this.state, ...newState} )
+        newState =  {...this.state, ...newState} 
+        this.setState(newState)
+        localStorage.setItem('Purrs', newState.purrDeposit)
     }
 
     render() {
