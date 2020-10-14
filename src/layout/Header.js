@@ -1,16 +1,16 @@
 import React from 'react';
-import Clapper from './../components/Clapper/Clapper'
+
 export default () => (
     <header className="bg-dark p-3 text-white">
         <div className="row">
             <div className="col col-md-auto align-self-center">
-                <a href="/" className="text-white" style={ {textDecoration: "underline"} }>Context Demo</a>
+                <a href="/" className="text-white" style={ {textDecoration: "underline"} }>Cat'o'gram</a>
             </div>
-            <div className="col">
-                {/* Menu */}
+            <div className="col align-self-center font-weight-light">
+                Context Demo App.
             </div>
             <div className="col col-md-auto">
-                <Clapper label={"Purrr"} />
+                <div className="text-white">Your Purr Deposit: Int</div>
             </div>
         </div>
     </header>

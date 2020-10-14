@@ -1,17 +1,20 @@
 import React from 'react';
+import lodash from 'lodash';
 
 class Clapper extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = {
+            totalClaps: lodash.random(0,50)
+        }
     }
     render() { 
         return (
             <button
-                className="btn btn-outline-primary text-white"
+                className="btn btn-outline-primary"
                 title={`Add one ${ this.props.label }`}
             >
-                +1 { this.props.label }
+                {this.state.totalClaps} { this.props.label }
             </button>
         );
     }
