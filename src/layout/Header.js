@@ -21,7 +21,8 @@ class Header extends React.Component {
                         <a href="/" className="text-white">🐈'o'gram</a>
                     </div>
                     <div className="col align-self-center font-weight-light">
-                        Context Demo App. Consider to make Purrs please.
+                        React Context Demo App.<br />
+                        Consider to make Purrs please.
                     </div>
                     <div className="col col-md-auto">
                         <div className="text-white">
