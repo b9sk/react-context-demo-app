@@ -4,7 +4,7 @@ export default () => (
     <header className="bg-dark p-3 text-white">
         <div className="row">
             <div className="col col-md-auto align-self-center">
-                <a href="/" className="text-white" style={ {textDecoration: "underline"} }>Cat'o'gram</a>
+                <a href="/" className="text-white">🐈'o'gram</a>
             </div>
             <div className="col align-self-center font-weight-light">
                 Context Demo App.
