@@ -42,7 +42,7 @@ class App extends React.Component {
             <DataContext.Provider value={ this.state.fetchedData }>
               <div className="row my-3">
                 <div className="col"><Main /></div>
-                <div className="col col-md-auto"><Sidebar /></div>
+                <div className="col-12 col-lg-auto"><Sidebar /></div>
               </div>
             </DataContext.Provider>
           </Content>

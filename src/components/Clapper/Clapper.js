@@ -11,9 +11,8 @@ class Clapper extends React.Component {
     render() { 
         return (
             <>
-            
             <button
-                className="btn btn-outline-primary"
+                className="btn btn-outline-primary btn-block"
                 title={`Add one ${ this.props.label }`}
             >
                 <span className="badge badge-pill badge-warning">{this.state.totalClaps}</span>
