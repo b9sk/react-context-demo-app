@@ -15,6 +15,7 @@ class ProfileCard extends Component {
         console.log("Purr...");
 
         // Access to PurrContextProvider state
+        console.log(this.context);
         this.context.update( { purrDeposit: this.context.purrDeposit + 1} ) 
 
         // Clapper component state

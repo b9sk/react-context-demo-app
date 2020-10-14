@@ -14,6 +14,7 @@ export class PurrContextProvider extends React.Component {
             // (because their context values also is changed props).
             // This is a key concept of how to update a provider
             update: this.updateState.bind(this),
+            IPassedThisUpdateMethodToProviderValues : ['from PurrContextProvider\'s state.', 'This trick is based on how do objects ref in JS']
         }
     }
 
@@ -25,7 +26,7 @@ export class PurrContextProvider extends React.Component {
 
     render() {
         return(
-            <PurrContext.Provider value={ {...this.state} }>
+            <PurrContext.Provider value={ this.state }>
                 {this.props.children}
             </PurrContext.Provider>
         )
