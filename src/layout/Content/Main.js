@@ -1,5 +1,14 @@
 import React from 'react';
 
 export default () => (
-    <main>i'm Main Content area</main>
+    <main>
+        <article>
+            <header>
+                meta
+            </header>
+            <section>
+                article body
+            </section>
+        </article>
+    </main>
 )

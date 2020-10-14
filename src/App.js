@@ -8,9 +8,13 @@ function App() {
   return (
     <>
       <Header />
+
       <Content>
-        <Sidebar />
-        <Main />
+        <div className="row my-3">
+          <div className="col"><Main /></div>
+          <div className="col col-md-auto"><Sidebar /></div>
+        </div>
+        
       </Content>
       <Footer />
     </>
