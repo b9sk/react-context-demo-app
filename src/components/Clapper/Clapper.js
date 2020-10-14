@@ -8,10 +8,13 @@ class Clapper extends React.Component {
             totalClaps: lodash.random(0,50)
         }
     }
+
     render() { 
         return (
             <>
             <button
+                // onClick update its parent context. Pass the class as an argument.
+                onClick={ () => this.props.onClick(this) }
                 className="btn btn-outline-primary btn-block"
                 title={`Add one ${ this.props.label }`}
             >

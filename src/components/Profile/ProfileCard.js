@@ -1,13 +1,27 @@
 import React, { Component } from 'react';
 import Clapper from './../Clapper/Clapper'
+import { PurrContext } from "../../Context/PurrContext";
 
 class ProfileCard extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
+        this.handlePurrAdd = this.handlePurrAdd.bind(this)
     }
+
+    static contextType = PurrContext
+
+    handlePurrAdd(btnComponent) {
+        console.log("Purr...");
+
+        // Access to PurrContextProvider state
+        this.context.update( { purrDeposit: this.context.purrDeposit - 1} ) 
+
+        // Clapper component state
+        btnComponent.setState( prevState => ( { totalClaps: prevState.totalClaps + 1 } ) )
+    }
+
     render() { 
-        // console.log(this.props.data);
         return (
             <article className="card">
                 <div className="card-body">
@@ -22,7 +36,7 @@ class ProfileCard extends Component {
                                     <div><span className="font-weight-bold">Year</span> {this.props.data.year}</div>
                                     <div><span className="font-weight-bold">Pantone value</span> {this.props.data.pantone_value}</div>
                                 </div>
-                                <Clapper label={"Purrr"} />
+                                <Clapper label={"Purrr"} onClick={ (btn) => this.handlePurrAdd(btn) } />
                             </div>
                         </div>
                     </div>

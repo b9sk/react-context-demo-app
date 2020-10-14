@@ -23,20 +23,19 @@ class App extends React.Component {
 
   async fetchData () {
     const data = await getDemoData();
-    // console.log( {data} );
-    // this.setState( { fetchedData: await this.fetchData() } )
-
     return data
   }
 
   async componentDidMount() {
+    // The only way to deal with fetch() so far
     this.setState( { fetchedData: await this.fetchData() } )
   }
 
   render() {
     return (
       <>
-        <PurrContextProvider value={{ username: "John" }}>
+        {/* init props (optional) */}
+        <PurrContextProvider value={{ username: "John", purrDeposit: 10 }}>
           <Header />
           <Content>
             <DataContext.Provider value={ this.state.fetchedData }>

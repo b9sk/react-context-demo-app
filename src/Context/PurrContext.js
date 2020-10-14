@@ -8,13 +8,22 @@ export class PurrContextProvider extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            purrDeposit: lodash.random(5,15)
+            ...props.value,
+            // Wiring to consumers. A wired consumer can change state of
+            // the component. This changing leads to rerender of all consumers
+            // (because their context values also is changed props).
+            // This is a key concept of how to update a provider
+            update: this.updateState.bind(this),
         }
+    }
+
+    updateState(newState = {...this.state}) {
+        this.setState( {...this.state, ...newState} )
     }
 
     render() {
         return(
-            <PurrContext.Provider value={ {...this.state, ...this.props.value} }>
+            <PurrContext.Provider value={ {...this.state} }>
                 {this.props.children}
             </PurrContext.Provider>
         )
